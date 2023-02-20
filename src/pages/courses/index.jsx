@@ -7,17 +7,20 @@ function index() {
     {
       id:0,
       courseTitle:'JavaScript',
-      link:'js'
+      link:'js',
+      img:'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png'
     },
     {
       id:1,
       courseTitle:'Python',
-      link:'py'
+      link:'py',
+      img:'https://images.ctfassets.net/mrop88jh71hl/55rrbZfwMaURHZKAUc5oOW/9e5fe805eb03135b82e962e92169ce6d/python-programming-language.png'
     },
     {
       id:2,
       courseTitle:'Java',
-      link:'java'
+      link:'java',
+      img:'https://www.developer.com/wp-content/uploads/2021/09/Java-tutorials.jpg'
     },
   ]
   return (
@@ -44,11 +47,11 @@ function index() {
                 
             </div>
             <section className='max-w-[1600px] mx-auto h-full'>
-               <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-5 gap-5'>
+               <section className='grid grid-cols-1 lg:grid-cols-2 p-5 gap-5'>
                 {
                   courses.map((item)=>{
                     return(
-                      <CourseCard key={item.id} title={item.courseTitle} link={item.link}/>
+                      <CourseCard key={item.id} title={item.courseTitle} link={item.link} img={item.img}/>
                     )
                   })
                 }
